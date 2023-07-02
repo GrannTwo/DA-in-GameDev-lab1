@@ -6,9 +6,9 @@
 
 | Задание | Выполнение | Баллы |
 | ------ | ------ | ------ |
-| Задание 1 | # | 60 |
-| Задание 2 | # | 20 |
-| Задание 3 | # | 20 |
+| Задание 1 | * | 60 |
+| Задание 2 | * | 20 |
+| Задание 3 | * | 20 |
 
 знак "*" - задание выполнено; знак "#" - задание не выполнено;
 
@@ -38,102 +38,81 @@
 Ознакомиться с основными операторами зыка Python на примере реализации линейной регрессии.
 
 ## Задание 1
-### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
+### Написать программы Hello World на Python и Unity. 
 Ход работы:
-- Произвести подготовку данных для работы с алгоритмом линейной регрессии. 10 видов данных были установлены случайным образом, и данные находились в линейной зависимости. Данные преобразуются в формат массива, чтобы их можно было вычислить напрямую при использовании умножения и сложения.
+- Python
 
 ```py
-
-In [ ]:
-#Import the required modules, numpy for calculation, and Matplotlib for drawing
-import numpy as np
-import matplotlib.pyplot as plt
-#This code is for jupyter Notebook only
-%matplotlib inline
-
-# define data, and change list to array
-x = [3,21,22,34,54,34,55,67,89,99]
-x = np.array(x)
-y = [2,22,24,65,79,82,55,130,150,199]
-y = np.array(y)
-
-#Show the effect of a scatter plot
-plt.scatter(x,y)
-
+ print('Hello world')
 ```
+ ![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/26ec5cb5-b2a1-4722-b31f-def9fb636fa7)
+  - Unity
+```c#
+using UnityEngine;
 
-- Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
-
+public class odsfgj : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("Hello world");
+    }
+}
+```
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/72e99f5f-9e7e-4158-9509-a019e6691c47)
 
 ## Задание 2
-### Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
+### В разделе "Ход работы" пошагово выполнить каждый пункт с описанием и примером реализации задачи по теме лабораторной работы
+Ход работы:
+1.	Произведем подготовку данных для работы с алгоритмом линейной регрессии. 
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/52e3ead3-3f1f-483b-abd8-ea8cc4703b5f)
+2.	Добавим связанные функции: функция модели - определяет модель линейной регрессии wx+b, функция потерь - функция потерь среднеквадратичной ошибки, функция оптимизации - метод градиентного спуска для нахождения частных производных w и b.
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/697d88ec-4857-4824-82f2-4bfb7217407f)
+3.	Начинаем итерацию.
 
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
+Первая:
 
-```py
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/f9cc2d11-15be-4d1f-944d-a5c518d06be9)
 
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
+Вторая:
 
-```
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/d8af4da1-d68d-4cb0-a48f-84c75dfc6c81)
+
+Третья:
+
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/9a97a926-0e96-422f-b800-3202fedd588a)
+
+Четвертая:
+
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/c36a3d97-2eeb-4c2d-9987-0671f37dce64)
+
+Пятая:
+
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/4196c861-e5b6-4fe5-a184-e872854ef16b)
+
+
+Десятитысячная:
+
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/4781cdbf-3c3e-4294-aaee-a4ccaf46195f)
 
 ## Задание 3
+### Изучить код на Python и ответить на вопросы:
+### Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
+  Величина loss должна стремиться к нулю, т.к. она показывает колличество потерь. Чем выше число итераций, тем меньше количество потерь.
+  При 5 итерациях loss равно 2524, а при 10000 итерациях loss равно 188.
+  ![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/2d9fbf20-7674-4ca5-b64f-bdf1ef5312b4)
+  ![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/4781cdbf-3c3e-4294-aaee-a4ccaf46195f)
 ### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
+Параметр Lr отвечает за угол наклона прямой, например, если при первой итерации cделать равным 1, то все точки сразу окажуться далеко внизу.
+![изображение](https://github.com/GrannTwo/DA-in-GameDev-lab1/assets/138350235/6d08d35b-e7df-4300-a273-9bb8ec7460a8)
 
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
 
-```py
-
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
-
-```
 
 ## Выводы
 
-Абзац умных слов о том, что было сделано и что было узнано.
-
+В ходе выполнения лабораторной работы были получены навыки работы с основными операторами зыка Python на примере реализации линейной регрессии, построения графиков.
 | Plugin | README |
 | ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+| Google Colab | https://colab.research.google.com/drive/11OOT_wDJ0xh34Q0kutDhsenhKwGhZuiI?usp=sharing |
 
-## Powered by
 
-**BigDigital Team: Denisov | Fadeev | Panov**
